@@ -5,7 +5,7 @@
 
 **OpenWire** is a lightweight, cross-platform open-source network monitoring tool for Windows, inspired by GlassWire. It allows you to view active TCP/UDP connections, track bandwidth usage per process, and monitor your network in real-time through a simple GTK3 GUI.
 
-![OpenWire Screenshot](docs/screenshot.png)
+> 📸 GUI screenshots will be available after testing on platforms with GTK3 support. See [docs/SCREENSHOTS.md](docs/SCREENSHOTS.md) for details.
 
 ## Features
 
@@ -15,14 +15,6 @@
 - 🖥️ **Simple GTK3 Interface**: Clean, intuitive GUI for easy monitoring
 - 🔄 **Real-Time Updates**: Automatic refresh every 2 seconds
 - 🌐 **Cross-Platform**: Works on Windows, Linux, and macOS
-
-## Screenshots
-
-### Active Connections Tab
-View all TCP/UDP connections with process information, local/remote addresses, and connection status.
-
-### Bandwidth Usage Tab
-Track bandwidth consumption per process with upload/download rates in real-time.
 
 ## Installation
 
