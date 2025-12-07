@@ -1,0 +1,42 @@
+from setuptools import setup, find_packages
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setup(
+    name="openwire",
+    version="0.1.0",
+    author="OpenWire Contributors",
+    description="A lightweight, cross-platform network monitoring tool",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/prottoy83/OpenWire",
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "Intended Audience :: System Administrators",
+        "Topic :: System :: Monitoring",
+        "Topic :: System :: Networking :: Monitoring",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Operating System :: Microsoft :: Windows",
+        "Operating System :: POSIX :: Linux",
+        "Operating System :: MacOS",
+    ],
+    python_requires=">=3.7",
+    install_requires=[
+        "PyGObject>=3.42.0",
+        "psutil>=5.9.0",
+    ],
+    entry_points={
+        "console_scripts": [
+            "openwire=openwire.main:main",
+        ],
+    },
+)
