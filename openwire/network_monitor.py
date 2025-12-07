@@ -4,8 +4,7 @@ Network monitoring module for tracking TCP/UDP connections and bandwidth usage
 
 import psutil
 import time
-from collections import defaultdict
-from typing import List, Dict, Tuple
+from typing import List, Dict
 
 
 class NetworkMonitor:
@@ -57,7 +56,16 @@ class NetworkMonitor:
         return connections
     
     def get_bandwidth_usage(self) -> Dict[int, Dict[str, float]]:
-        """Get bandwidth usage per process (bytes/second)"""
+        """
+        Get bandwidth usage per process (bytes/second)
+        
+        Note: This method uses general I/O counters (read_bytes/write_bytes)
+        as a proxy for network activity. This includes all I/O operations,
+        not just network traffic. For most network-intensive applications,
+        this provides a reasonable approximation, but it may include disk I/O.
+        
+        Returns a dictionary with PID as key and bandwidth data as value.
+        """
         current_time = time.time()
         time_delta = current_time - self.last_check_time
         

@@ -58,7 +58,7 @@ def main():
     print("\n[3] Bandwidth Monitoring:")
     print("-" * 70)
     print("  Collecting initial sample...")
-    bandwidth1 = monitor.get_bandwidth_usage()
+    monitor.get_bandwidth_usage()  # Initial sample to establish baseline
     
     print("  Waiting 2 seconds...")
     time.sleep(2)
