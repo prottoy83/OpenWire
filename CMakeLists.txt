@@ -19,5 +19,6 @@ add_executable(OpenWire
     src/main.cpp
     src/gui.cpp
     src/adapters.cpp
+    src/process.cpp
 )
 target_link_libraries(OpenWire ${GTK4_LIBRARIES} iphlpapi ws2_32)

@@ -1,18 +1,18 @@
 #include "gui.h"
 #include "adapters.h"
+#include "process.h"
 #include <iostream>
+
 int main()
 {
-    //Get info
+    // Gather data
     std::vector<NetworkAdapter> adapters = getNetworkAdapters();
-    for(const auto& adapter : adapters) {
-        std::cout << "Adapter: " << adapter.name 
-                  << ", Description: " << adapter.description 
-                  << ", IP: " << adapter.ipAddress << std::endl;
-    }
-    //Start GUI
+    std::vector<processInfo> processes = processList();
+
+    // Start GUI
     GUI window = GUI();
     window.setAdapters(adapters);
+    window.setProcesses(processes);
     window.run();
 
     return 0;
