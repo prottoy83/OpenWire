@@ -1,6 +1,8 @@
 # OpenWire
 Cross platform lightweight network monitor with real-time per-process connection &amp; bandwidth tracking.
 
+(For now, I will build this for windows only, support for other Operating Systems will be added later)
+
 # Prepare the environment
 Use MSYS2 if on Windows, and install gcc stack
 ```bash
